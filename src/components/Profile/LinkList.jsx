@@ -1,4 +1,6 @@
 import LinkItems from "./LinkItems";
+import { Link } from "react-router-dom";
+import classes from "./LinkItems.module.css"
 
 const LinkList = () => {
   return (
@@ -33,12 +35,9 @@ const LinkList = () => {
         id="book__design"
         sub="The only book you'll ever need to learn about design. From basic to advanced concepts and more, all for $0"
       />
-      <LinkItems
-        name="Contact Me"
-        link="/contact"
-        id="contact"
-        sub="Get in touch with me"
-      />
+      <div className={classes["link-item"]}>
+        <Link to="/contact" id="contact">Contact Me</Link>
+      </div>
     </section>
   );
 };
