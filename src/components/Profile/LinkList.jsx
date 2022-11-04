@@ -35,7 +35,7 @@ const LinkList = () => {
       />
       <LinkItems
         name="Contact Me"
-        link="/content"
+        link="/contact"
         id="contact"
         sub="Get in touch with me"
       />
