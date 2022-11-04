@@ -33,6 +33,12 @@ const LinkList = () => {
         id="book__design"
         sub="The only book you'll ever need to learn about design. From basic to advanced concepts and more, all for $0"
       />
+      <LinkItems
+        name="Contact Me"
+        link="/content"
+        id="contact"
+        sub="Get in touch with me"
+      />
     </section>
   );
 };
