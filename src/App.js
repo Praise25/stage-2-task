@@ -1,11 +1,16 @@
-import { Fragment } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
-    <Fragment>
-      <ProfilePage />
-    </Fragment>
+    <Switch>
+      <Route path="/" exact>
+        <Redirect to="/profile" />
+      </Route>
+      <Route path="/profile">
+        <ProfilePage />
+      </Route>
+    </Switch>
   );
 }
 
