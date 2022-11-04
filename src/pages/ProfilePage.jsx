@@ -1,10 +1,14 @@
 import Boilerplate from "../components/Layout/Boilerplate";
-import Profile from "../components/Profile/Profile";
+import ProfileHeader from "../components/Profile/ProfileHeader";
+import LinkList from "../components/Profile/LinkList";
+import Socials from "../components/Profile/Socials";
 
 const ProfilePage = () => {
   return (
     <Boilerplate>
-      <Profile />
+      <ProfileHeader />
+      <LinkList />
+      <Socials />
     </Boilerplate>
   )
 }
