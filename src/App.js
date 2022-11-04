@@ -1,5 +1,6 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
       </Route>
       <Route path="/profile">
         <ProfilePage />
+      </Route>
+      <Route path="/contact">
+        <ContactPage />
       </Route>
     </Switch>
   );
