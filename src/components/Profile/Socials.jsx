@@ -1,6 +1,6 @@
 import classes from "./Socials.module.css";
-import slackSvg from "../assets/slack.svg";
-import githubSvg from "../assets/github.svg";
+import slackSvg from "../../assets/slack.svg";
+import githubSvg from "../../assets/github.svg";
 
 const Socials = () => {
   return (

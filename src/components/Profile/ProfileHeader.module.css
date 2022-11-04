@@ -21,7 +21,7 @@
 }
 
 .profile-header-content img:hover {
-  content: url("../assets/profile-pic-hover.svg");
+  content: url("../../assets/profile-pic-hover.svg");
 }
 
 .share-button {
@@ -37,7 +37,7 @@
 }
 
 .share-button img:hover {
-  content: url("../assets/share-button-hover.svg");
+  content: url("../../assets/share-button-hover.svg");
   margin-right: 9.5em;
 }
 
@@ -53,11 +53,11 @@
 
 @media (max-width: 480px) {
   .share-button img {
-    content: url("../assets/mobile-share-button-default.svg");
+    content: url("../../assets/mobile-share-button-default.svg");
   }
 
   .share-button img:hover {
-    content: url("../assets/mobile-share-button-hover.svg");
+    content: url("../../assets/mobile-share-button-hover.svg");
     margin-right: 0;
   }
 }

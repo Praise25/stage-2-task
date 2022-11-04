@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import classes from "./App.module.css";
-import Profile from "./components/Profile";
-import Footer from "./components/Footer";
+import Profile from "./components/Profile/Profile";
+import Footer from "./components/Layout/Footer";
 
 function App() {
   return (

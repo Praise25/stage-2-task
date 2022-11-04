@@ -1,7 +1,7 @@
-import profilePicDefault from "../assets/profile-pic-default.png";
-import shareButtonDefault from "../assets/share-button-default.png";
+import profilePicDefault from "../../assets/profile-pic-default.png";
+import shareButtonDefault from "../../assets/share-button-default.png";
 import classes from "./ProfileHeader.module.css";
-
+  
 const ProfileHeader = () => {
   return (
     <div className={classes["profile-header"]}>
