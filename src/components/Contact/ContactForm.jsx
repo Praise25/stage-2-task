@@ -8,6 +8,11 @@ import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [consent, setConsent] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -15,12 +20,29 @@ const ContactForm = () => {
     if (form.checkValidity() === false) {
       event.stopPropagation();
       setValidated(true);
-      return
+      return;
     }
-
-    // Post validation code
-    console.log("Form is valid!!!");
   };
+
+  const firstNameChangeHandler = (event) => {
+    setFirstName(event.target.value);
+  };
+
+  const lastNameChangeHandler = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const emailChangeHandler = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const messageChangeHandler = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const consentChangeHandler = (event) => {
+    setConsent(event.currentTarget.checked)
+  }
 
   return (
     <Container className={classes.container}>
@@ -45,6 +67,8 @@ const ContactForm = () => {
             <Form.Control
               type="input"
               placeholder="Enter your first name"
+              value={firstName}
+              onChange={firstNameChangeHandler}
               required
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -58,6 +82,8 @@ const ContactForm = () => {
             <Form.Control
               type="input"
               placeholder="Enter your last name"
+              value={lastName}
+              onChange={lastNameChangeHandler}
               required
             />
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -73,6 +99,8 @@ const ContactForm = () => {
             <Form.Control
               type="email"
               placeholder="yourname@email.com"
+              value={email}
+              onChange={emailChangeHandler}
               required
             ></Form.Control>
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -89,6 +117,8 @@ const ContactForm = () => {
               as="textarea"
               rows={5}
               placeholder="Send me a text message and I'll reply you as soon as possible"
+              value={message}
+              onChange={messageChangeHandler}
               required
             ></Form.Control>
             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -104,6 +134,8 @@ const ContactForm = () => {
               type="checkbox"
               id="consent"
               label="You agree to providing your data to Praise who may contact you."
+              checked={consent}
+              onChange={consentChangeHandler}
               required
             />
           </Form.Group>
