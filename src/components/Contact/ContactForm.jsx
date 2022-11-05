@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
@@ -13,6 +14,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
+  const [show, setShow] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +29,8 @@ const ContactForm = () => {
     setFirstName("");
     setEmail("");
     setMessage("");
-    setConsent(false)
+    setConsent(false);
+    setShow(true);
     setValidated(false);
   };
 
@@ -48,11 +51,21 @@ const ContactForm = () => {
   };
 
   const consentChangeHandler = (event) => {
-    setConsent(event.currentTarget.checked)
-  }
+    setConsent(event.currentTarget.checked);
+  };
+
+  const closeHandler = () => {
+    setShow(false);
+  };
 
   return (
     <Container className={classes.container}>
+      {show && (
+        <Alert variant="success" onClose={closeHandler} dismissible>
+          Message received!!! I'll get back to you within a week.
+        </Alert>
+      )}
+
       <Form
         className="mb-5"
         onSubmit={handleSubmit}
