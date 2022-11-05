@@ -1,6 +1,6 @@
 import LinkItems from "./LinkItems";
 import { Link } from "react-router-dom";
-import classes from "./LinkItems.module.css"
+import classes from "./LinkList.module.css"
 
 const LinkList = () => {
   return (

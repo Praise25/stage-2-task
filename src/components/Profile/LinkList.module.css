@@ -1,0 +1,31 @@
+.link-item {
+  display: flex;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.link-item a {
+  display: block;
+  background-color: #eaecf0;
+  color: black;
+  padding: 1.5em 2em;
+  text-decoration: none;
+  width: 100%;
+  border: 1px solid #eaecf0;
+  border-radius: 0.5em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.link-item a:hover {
+  background-color: #d0d5dd;
+}
+
+.link-item a:focus {
+  border-color: #98a2b3;
+}
+
+.link-item a sub {
+  font-size: 0.85em;
+  font-weight: 400;
+}
