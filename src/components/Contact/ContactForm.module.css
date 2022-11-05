@@ -1,15 +1,6 @@
 .container{
   width: 100%;
 }
-.invalid, .invalid::placeholder {
-  border-color: #e03748;
-  color: #e03748;
-}
-
-.invalid:focus {
-  border: 1px solid #f5a9b0;
-  box-shadow: 0 0 0 0.25rem #f5a9b0;
-}
 
 @media (min-width: 769px) {
   .container {
