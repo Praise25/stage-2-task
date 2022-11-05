@@ -22,6 +22,13 @@ const ContactForm = () => {
       setValidated(true);
       return;
     }
+
+    setLastName("");
+    setFirstName("");
+    setEmail("");
+    setMessage("");
+    setConsent(false)
+    setValidated(false);
   };
 
   const firstNameChangeHandler = (event) => {
